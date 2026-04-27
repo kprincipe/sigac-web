@@ -10,6 +10,18 @@ const PORT = 8080;
 app.use(express.static('public'));
 app.use(express.json());
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    if ('OPTIONS' == req.method) {
+        res.sendStatus(200);
+    }
+    else {
+        next();
+    }
+});
+
 // end-point que responde solicitacoes http GET com todos os usuarios cadastrados no sistema
 app.get('/api/usuarios', (req, res) => {
     const usuarios = db.prepare('SELECT * FROM usuarios;');
