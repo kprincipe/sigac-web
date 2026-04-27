@@ -1,0 +1,35 @@
+#container {
+    display: flex;
+}
+
+#container #content {
+}
+
+.entry {
+    background-color: #ffffaa;
+    margin-bottom: 8px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    border:2px dashed;
+}
+
+#container #sidebar {
+    width: 32%;
+}
+
+.tab {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+
+    margin-bottom: 8px;
+    margin-right: 8px;
+
+    padding: 8px;
+}
+
+.tab:hover {
+    transition: 0.1s;
+    background-color: #4a4a4a;
+}
