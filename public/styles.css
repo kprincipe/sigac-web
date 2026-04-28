@@ -3,6 +3,7 @@
 }
 
 #container #content {
+    width: 80%;
 }
 
 .entry {
@@ -16,7 +17,7 @@
 }
 
 #container #sidebar {
-    width: 32%;
+    width: 16%;
 }
 
 .tab {
